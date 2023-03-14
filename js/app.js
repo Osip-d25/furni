@@ -13576,7 +13576,7 @@
             gsapWithCSS.from(stChoose.querySelector("h2.title"), {
                 scrollTrigger: {
                     trigger: stChoose,
-                    start: "-100 top"
+                    start: "200 top"
                 },
                 x: -100,
                 duration: .5,
@@ -13585,45 +13585,28 @@
             gsapWithCSS.from(stChoose.querySelector(".choose-text"), {
                 scrollTrigger: {
                     trigger: stChoose,
-                    start: "-100 top"
+                    start: "200 top"
                 },
                 y: 50,
                 duration: .5,
                 opacity: 0,
                 delay: .4
             });
-            const tlChoose = gsapWithCSS.timeline();
-            tlChoose.from(stChoose.querySelector("h2.title"), {
+            gsapWithCSS.from(stChoose.querySelectorAll(".item"), {
                 scrollTrigger: {
                     trigger: stChoose,
-                    start: "-100 0",
-                    scrub: true
-                },
-                y: 20,
-                delay: 1
-            }).from(stChoose.querySelector(".list"), {
-                scrollTrigger: {
-                    trigger: stChoose,
-                    start: "-100 0",
-                    scrub: true
-                },
-                yPercent: -7,
-                autoAlpha: .8
-            });
-            gsapWithCSS.from(stChoose.querySelector(".list"), {
-                scrollTrigger: {
-                    trigger: stChoose,
-                    start: "-100 0"
+                    start: "200 top"
                 },
                 yPercent: 100,
                 opacity: 0,
-                duration: .8,
-                delay: .25
+                duration: 1,
+                delay: .5,
+                stagger: .25
             });
             gsapWithCSS.from(stChoose.querySelector("._icon-Dot"), {
                 scrollTrigger: {
                     trigger: stChoose,
-                    start: "-100 0"
+                    start: "200 top"
                 },
                 y: -150,
                 scale: 0,
@@ -13633,52 +13616,60 @@
             gsapWithCSS.from(stChoose.querySelector(".img"), {
                 scrollTrigger: {
                     trigger: stChoose,
-                    start: "-100 0"
+                    start: "200 top"
                 },
                 xPercent: 100,
                 opacity: 0,
                 duration: .8,
                 delay: .25
             });
+            const tlChoose = gsapWithCSS.timeline();
+            tlChoose.from(stChoose.querySelector("h2.title"), {
+                scrollTrigger: {
+                    trigger: stChoose,
+                    start: "200 center",
+                    scrub: true
+                },
+                y: 20,
+                delay: 1
+            }).from(stChoose.querySelector(".list"), {
+                scrollTrigger: {
+                    trigger: stChoose,
+                    start: "-200 0",
+                    scrub: true
+                },
+                yPercent: -7,
+                autoAlpha: .8
+            });
             const stInterior = document.querySelector(".section-interior");
             const tlInterior = gsapWithCSS.timeline();
             tlInterior.from(stInterior.querySelector(".interior-1"), {
                 scrollTrigger: {
                     trigger: stInterior,
-                    start: "-100 0",
+                    start: "bottom center",
                     scrub: true
                 },
                 x: 15
             }).from(stInterior.querySelector(".interior-2"), {
                 scrollTrigger: {
                     trigger: stInterior,
-                    start: "-100 0",
+                    start: "bottom center",
                     scrub: true
                 },
                 y: -15
             }).from(stInterior.querySelector(".interior-3"), {
                 scrollTrigger: {
                     trigger: stInterior,
-                    start: "-100 0",
+                    start: "bottom center",
                     scrub: true
                 },
                 y: 15,
                 x: -15
             });
-            gsapWithCSS.from(stInterior.querySelector("._icon-Dot"), {
-                scrollTrigger: {
-                    trigger: stInterior,
-                    start: "100 0"
-                },
-                y: -150,
-                scale: 0,
-                opacity: 0,
-                duration: 1
-            });
             gsapWithCSS.from(stInterior.querySelector(".right"), {
                 scrollTrigger: {
                     trigger: stInterior,
-                    start: "-100 0"
+                    start: "200 top"
                 },
                 x: 150,
                 opacity: 0,
@@ -13709,29 +13700,27 @@
             gsapWithCSS.from(stRead.querySelectorAll(".item"), {
                 scrollTrigger: {
                     trigger: stRead,
-                    start: "-100 0"
+                    start: "500 center"
                 },
                 opacity: 0,
-                xPercent: -100,
+                x: -100,
                 duration: 1,
-                delay: .8,
                 stagger: .5
             });
             const stBlog = document.querySelector(".section-recentBlog");
             gsapWithCSS.from(stBlog.querySelector(".blog"), {
                 scrollTrigger: {
                     trigger: stBlog,
-                    start: "-100 top"
+                    start: "300 top"
                 },
                 x: -100,
                 opacity: 0,
-                duration: 1,
-                delay: 1
+                duration: 1
             });
             gsapWithCSS.from(stBlog.querySelectorAll(".item"), {
                 scrollTrigger: {
                     trigger: stBlog,
-                    start: "-100 0"
+                    start: "300 top"
                 },
                 x: -100,
                 opacity: 0,
@@ -13743,7 +13732,7 @@
             gsapWithCSS.from(stFooter.querySelector(".right img"), {
                 scrollTrigger: {
                     trigger: stFooter,
-                    start: "-100 top",
+                    start: "400 top",
                     scrub: true
                 },
                 x: 80,
