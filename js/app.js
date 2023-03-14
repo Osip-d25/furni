@@ -8105,7 +8105,7 @@
                 loop: true,
                 touchRatio: 0,
                 autoplay: {
-                    delay: 3e3,
+                    delay: 4e3,
                     disableOnInteraction: false
                 },
                 breakpoints: {
@@ -13466,7 +13466,6 @@
         ScrollTrigger_getGSAP() && ScrollTrigger_gsap.registerPlugin(ScrollTrigger_ScrollTrigger);
         gsapWithCSS.registerPlugin(ScrollTrigger_ScrollTrigger);
         const tlLoader = gsapWithCSS.timeline();
-        gsapWithCSS.timeline();
         tlLoader.set(".loader__item", {
             yPercent: -100
         }).set(".loader__title", {
@@ -13493,20 +13492,267 @@
             opacity: 0,
             duration: 1
         }, "-=0.2");
-        window.innerWidth;
-        const tlSection = gsapWithCSS.timeline();
-        const stStudio = document.querySelector(".section-studio");
         const mediaQuery = window.matchMedia("(min-width: 992px)");
-        if (mediaQuery.matches) tlSection.set(stStudio.querySelector(".title"), {
-            x: -100,
-            opacity: 0,
-            duration: .5
-        }).to(stStudio.querySelector(".title"), {
-            x: 0,
-            opacity: 1,
-            duration: .5,
-            delay: 5
-        });
+        if (mediaQuery.matches) {
+            const stStudio = document.querySelector(".section-studio");
+            gsapWithCSS.to(stStudio.querySelector(".title"), {
+                scrollTrigger: {
+                    trigger: stStudio,
+                    start: "-100 0",
+                    scrub: true
+                },
+                y: -100,
+                opacity: .6
+            });
+            gsapWithCSS.to(stStudio.querySelector(".btn-yellow"), {
+                scrollTrigger: {
+                    trigger: stStudio,
+                    start: "-100 0",
+                    scrub: true
+                },
+                scale: 1.2,
+                x: 50,
+                y: 50
+            });
+            gsapWithCSS.to(stStudio.querySelector(".btn-border"), {
+                scrollTrigger: {
+                    trigger: stStudio,
+                    start: "-100 0",
+                    scrub: true
+                },
+                scale: .8,
+                opacity: .8,
+                x: 50,
+                y: 50
+            });
+            gsapWithCSS.to(stStudio.querySelector(".studio-img"), {
+                scrollTrigger: {
+                    trigger: stStudio,
+                    start: "-100 0",
+                    scrub: true
+                },
+                scale: 1.1,
+                duration: .5,
+                y: -40
+            });
+            const stMaterial = document.querySelector(".section-material");
+            gsapWithCSS.from(stMaterial.querySelector(".title"), {
+                scrollTrigger: {
+                    trigger: stMaterial,
+                    start: "-200 top"
+                },
+                y: 100,
+                duration: 1,
+                opacity: 0
+            });
+            gsapWithCSS.from(stMaterial.querySelector(".text"), {
+                scrollTrigger: {
+                    trigger: stMaterial,
+                    start: "-200 top"
+                },
+                y: 80,
+                duration: .5,
+                opacity: 0
+            });
+            gsapWithCSS.from(stMaterial.querySelector(".btn"), {
+                scrollTrigger: {
+                    trigger: stMaterial,
+                    start: "-200 top"
+                },
+                delay: 1,
+                duration: .2,
+                opacity: 0
+            });
+            gsapWithCSS.from(stMaterial.querySelector(".swiper"), {
+                scrollTrigger: {
+                    trigger: stMaterial,
+                    start: "-200 top"
+                },
+                xPercent: 100,
+                duration: 2,
+                opacity: 0
+            });
+            const stChoose = document.querySelector(".section-choose");
+            gsapWithCSS.from(stChoose.querySelector("h2.title"), {
+                scrollTrigger: {
+                    trigger: stChoose,
+                    start: "-200 top"
+                },
+                x: -100,
+                duration: .5,
+                opacity: 0
+            });
+            gsapWithCSS.from(stChoose.querySelector(".choose-text"), {
+                scrollTrigger: {
+                    trigger: stChoose,
+                    start: "-200 top"
+                },
+                y: 50,
+                duration: .5,
+                opacity: 0,
+                delay: .4
+            });
+            const tlChoose = gsapWithCSS.timeline();
+            tlChoose.from(stChoose.querySelector("h2.title"), {
+                scrollTrigger: {
+                    trigger: stChoose,
+                    start: "-150 0",
+                    scrub: true
+                },
+                y: 20,
+                delay: 1
+            }).from(stChoose.querySelector(".list"), {
+                scrollTrigger: {
+                    trigger: stChoose,
+                    start: "-120 0",
+                    scrub: true
+                },
+                yPercent: -7,
+                autoAlpha: .8
+            });
+            gsapWithCSS.from(stChoose.querySelector(".list"), {
+                scrollTrigger: {
+                    trigger: stChoose,
+                    start: "-300 0"
+                },
+                yPercent: 100,
+                opacity: 0,
+                duration: .8,
+                delay: .25
+            });
+            gsapWithCSS.from(stChoose.querySelector("._icon-Dot"), {
+                scrollTrigger: {
+                    trigger: stChoose,
+                    start: "120 0"
+                },
+                y: -150,
+                scale: 0,
+                opacity: 0,
+                duration: 1
+            });
+            gsapWithCSS.from(stChoose.querySelector(".img"), {
+                scrollTrigger: {
+                    trigger: stChoose,
+                    start: "-200 0"
+                },
+                xPercent: 100,
+                opacity: 0,
+                duration: .8,
+                delay: .25
+            });
+            const stInterior = document.querySelector(".section-interior");
+            const tlInterior = gsapWithCSS.timeline();
+            tlInterior.from(stInterior.querySelector(".interior-1"), {
+                scrollTrigger: {
+                    trigger: stInterior,
+                    start: "-400 0",
+                    scrub: true
+                },
+                x: 15
+            }).from(stInterior.querySelector(".interior-2"), {
+                scrollTrigger: {
+                    trigger: stInterior,
+                    start: "center center",
+                    scrub: true
+                },
+                y: -15
+            }).from(stInterior.querySelector(".interior-3"), {
+                scrollTrigger: {
+                    trigger: stInterior,
+                    start: "-200 0",
+                    scrub: true
+                },
+                y: 15,
+                x: -15
+            });
+            gsapWithCSS.from(stInterior.querySelector("._icon-Dot"), {
+                scrollTrigger: {
+                    trigger: stInterior,
+                    start: "120 0"
+                },
+                y: -150,
+                scale: 0,
+                opacity: 0,
+                duration: 1
+            });
+            gsapWithCSS.from(stInterior.querySelector(".right"), {
+                scrollTrigger: {
+                    trigger: stInterior,
+                    start: "-200 0"
+                },
+                x: 150,
+                opacity: 0,
+                delay: 1.2,
+                duration: 1
+            });
+            gsapWithCSS.from(stInterior.querySelectorAll(".item"), {
+                scrollTrigger: {
+                    trigger: stInterior,
+                    start: "-200 0"
+                },
+                y: 100,
+                opacity: 0,
+                delay: 1.5,
+                duration: 1,
+                stagger: .25
+            });
+            gsapWithCSS.from(stInterior.querySelector(".btn"), {
+                scrollTrigger: {
+                    trigger: stInterior,
+                    start: "-200 0"
+                },
+                y: 100,
+                opacity: 0,
+                delay: 2,
+                duration: .75
+            });
+            const stRead = document.querySelector(".section-read-more");
+            gsapWithCSS.from(stRead.querySelectorAll(".item"), {
+                scrollTrigger: {
+                    trigger: stRead,
+                    start: "-100 0"
+                },
+                opacity: 0,
+                xPercent: -100,
+                duration: 1,
+                delay: 1.5,
+                stagger: .5
+            });
+            const stBlog = document.querySelector(".section-recentBlog");
+            gsapWithCSS.from(stBlog.querySelector(".blog"), {
+                scrollTrigger: {
+                    trigger: stBlog,
+                    start: "-200 top"
+                },
+                x: -100,
+                opacity: 0,
+                duration: 1,
+                delay: 1
+            });
+            gsapWithCSS.from(stBlog.querySelectorAll(".item"), {
+                scrollTrigger: {
+                    trigger: stBlog,
+                    start: "-100 0"
+                },
+                x: -100,
+                opacity: 0,
+                duration: 1,
+                stagger: .25,
+                delay: .5
+            });
+            const stFooter = document.querySelector(".footer");
+            gsapWithCSS.from(stFooter.querySelector(".right img"), {
+                scrollTrigger: {
+                    trigger: stFooter,
+                    start: "-300 top",
+                    scrub: true
+                },
+                x: 80,
+                y: -80,
+                duration: 1,
+                scale: .8
+            });
+        }
         var jquery = __webpack_require__(755);
         jquery(document).ready((function() {
             const $burger = jquery(".icon-menu");
