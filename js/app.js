@@ -13645,21 +13645,21 @@
             tlInterior.from(stInterior.querySelector(".interior-1"), {
                 scrollTrigger: {
                     trigger: stInterior,
-                    start: "-400 0",
+                    start: "-100 0",
                     scrub: true
                 },
                 x: 15
             }).from(stInterior.querySelector(".interior-2"), {
                 scrollTrigger: {
                     trigger: stInterior,
-                    start: "center center",
+                    start: "-100 0",
                     scrub: true
                 },
                 y: -15
             }).from(stInterior.querySelector(".interior-3"), {
                 scrollTrigger: {
                     trigger: stInterior,
-                    start: "-200 0",
+                    start: "-100 0",
                     scrub: true
                 },
                 y: 15,
@@ -13678,7 +13678,7 @@
             gsapWithCSS.from(stInterior.querySelector(".right"), {
                 scrollTrigger: {
                     trigger: stInterior,
-                    start: "-200 0"
+                    start: "-100 0"
                 },
                 x: 150,
                 opacity: 0,
@@ -13688,7 +13688,7 @@
             gsapWithCSS.from(stInterior.querySelectorAll(".item"), {
                 scrollTrigger: {
                     trigger: stInterior,
-                    start: "-200 0"
+                    start: "-100 0"
                 },
                 y: 100,
                 opacity: 0,
@@ -13699,7 +13699,7 @@
             gsapWithCSS.from(stInterior.querySelector(".btn"), {
                 scrollTrigger: {
                     trigger: stInterior,
-                    start: "-200 0"
+                    start: "-100 0"
                 },
                 y: 100,
                 opacity: 0,
@@ -13744,7 +13744,7 @@
             gsapWithCSS.from(stFooter.querySelector(".right img"), {
                 scrollTrigger: {
                     trigger: stFooter,
-                    start: "-300 top",
+                    start: "-100 top",
                     scrub: true
                 },
                 x: 80,
