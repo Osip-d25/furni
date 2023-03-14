@@ -13682,7 +13682,6 @@
                 },
                 x: 150,
                 opacity: 0,
-                delay: 1.2,
                 duration: 1
             });
             gsapWithCSS.from(stInterior.querySelectorAll(".item"), {
@@ -13692,7 +13691,7 @@
                 },
                 y: 100,
                 opacity: 0,
-                delay: 1.5,
+                delay: 1,
                 duration: 1,
                 stagger: .25
             });
@@ -13703,7 +13702,7 @@
                 },
                 y: 100,
                 opacity: 0,
-                delay: 2,
+                delay: 1.5,
                 duration: .75
             });
             const stRead = document.querySelector(".section-read-more");
