@@ -13517,7 +13517,7 @@
             gsapWithCSS.to(stStudio.querySelector(".btn-border"), {
                 scrollTrigger: {
                     trigger: stStudio,
-                    start: "-100 0",
+                    start: "-200 0",
                     scrub: true
                 },
                 scale: .8,
@@ -13576,7 +13576,7 @@
             gsapWithCSS.from(stChoose.querySelector("h2.title"), {
                 scrollTrigger: {
                     trigger: stChoose,
-                    start: "200 top"
+                    start: "0 top"
                 },
                 x: -100,
                 duration: .5,
@@ -13585,7 +13585,7 @@
             gsapWithCSS.from(stChoose.querySelector(".choose-text"), {
                 scrollTrigger: {
                     trigger: stChoose,
-                    start: "200 top"
+                    start: "0 top"
                 },
                 y: 50,
                 duration: .5,
@@ -13595,7 +13595,7 @@
             gsapWithCSS.from(stChoose.querySelectorAll(".item"), {
                 scrollTrigger: {
                     trigger: stChoose,
-                    start: "200 top"
+                    start: "0 top"
                 },
                 yPercent: 100,
                 opacity: 0,
@@ -13606,7 +13606,7 @@
             gsapWithCSS.from(stChoose.querySelector("._icon-Dot"), {
                 scrollTrigger: {
                     trigger: stChoose,
-                    start: "200 top"
+                    start: "0 top"
                 },
                 y: -150,
                 scale: 0,
@@ -13616,7 +13616,7 @@
             gsapWithCSS.from(stChoose.querySelector(".img"), {
                 scrollTrigger: {
                     trigger: stChoose,
-                    start: "200 top"
+                    start: "0 top"
                 },
                 xPercent: 100,
                 opacity: 0,
@@ -13669,7 +13669,7 @@
             gsapWithCSS.from(stInterior.querySelector(".right"), {
                 scrollTrigger: {
                     trigger: stInterior,
-                    start: "200 top"
+                    start: "0 top"
                 },
                 x: 150,
                 opacity: 0,
@@ -13678,7 +13678,7 @@
             gsapWithCSS.from(stInterior.querySelectorAll(".item"), {
                 scrollTrigger: {
                     trigger: stInterior,
-                    start: "-100 0"
+                    start: "0 top"
                 },
                 y: 100,
                 opacity: 0,
@@ -13689,7 +13689,7 @@
             gsapWithCSS.from(stInterior.querySelector(".btn"), {
                 scrollTrigger: {
                     trigger: stInterior,
-                    start: "-100 0"
+                    start: "0 top"
                 },
                 y: 100,
                 opacity: 0,
