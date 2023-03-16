@@ -13626,21 +13626,22 @@
                 tlInterior.from(stInterior.querySelector(".interior-1"), {
                     scrollTrigger: {
                         trigger: stInterior,
-                        start: "bottom center",
+                        start: "-100 center",
+                        end: "+=150",
                         scrub: true
                     },
                     x: 15
                 }).from(stInterior.querySelector(".interior-2"), {
                     scrollTrigger: {
                         trigger: stInterior,
-                        start: "bottom center",
+                        start: "-100 center",
                         scrub: true
                     },
                     y: -15
                 }).from(stInterior.querySelector(".interior-3"), {
                     scrollTrigger: {
                         trigger: stInterior,
-                        start: "bottom center",
+                        start: "-100 center",
                         scrub: true
                     },
                     y: 15,
@@ -13712,8 +13713,9 @@
                 gsapWithCSS.from(stFooter.querySelector(".right img"), {
                     scrollTrigger: {
                         trigger: stFooter,
-                        start: "-250 center",
-                        scrub: true
+                        start: "-100 bottom",
+                        scrub: true,
+                        end: "300 bottom"
                     },
                     x: 80,
                     y: -70,
